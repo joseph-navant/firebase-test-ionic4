@@ -7,8 +7,8 @@ fi
 
 BRANCH=$(git branch | grep \* | cut -d ' ' -f2-)
 
-if [ $BRANCH != "develop" ]; then
-  echo "Not in develop branch"
+if [ $BRANCH = "master" ]; then
+  echo "You sould not deploy in master branch"
 else
   # Remove old files
   rm -rf www
