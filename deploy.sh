@@ -24,4 +24,7 @@ else
   if [ $? -eq 0 ]; then
     firebase deploy
   fi
+
+  git add .firebase/hosting.d3d3.cache
+  git commit -m "Updating firebase cache file"
 fi
