@@ -21,5 +21,7 @@ else
   fi
 
   # Deploy
-  firebase deploy
+  if [ $? -eq 0 ]; then
+    firebase deploy
+  fi
 fi
